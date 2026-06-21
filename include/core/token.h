@@ -7,4 +7,10 @@ typedef struct {
     double total_supply;
 } Token;
 
+extern Token aht_token;
+
+void init_token();
+void token_mint(double amount);
+void view_token();
+
 #endif
