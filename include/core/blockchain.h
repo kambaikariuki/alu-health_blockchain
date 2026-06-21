@@ -10,6 +10,9 @@ typedef struct {
     int height;
 } Blockchain;
 
+// Global blockchain
+extern Blockchain blockchain;
+
 // functions
 
 void init_blockchain();

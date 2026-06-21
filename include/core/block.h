@@ -21,7 +21,6 @@ typedef struct
     char miner_id[64];
     int difficulty;
 
-    char block_size[HASH_SIZE];
 } Block;
 
 #endif

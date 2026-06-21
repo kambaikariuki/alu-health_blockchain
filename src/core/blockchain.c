@@ -48,7 +48,7 @@ Block create_genesis_block()
 
     genesis.nonce = 0;
     strcpy(genesis.miner_id, "SYSTEM");
-    strcpy(genesis.block_size, "0");
+
 
     genesis.difficulty = chain_state.difficulty;
 
@@ -68,13 +68,14 @@ static void compute_block_hash(const Block *block, char output[SHA256_HEX_SIZE])
 {
     char buffer[SHA256_HEX_SIZE * 2 + 128];
  
-    snprintf(buffer, sizeof(buffer), "%d|%ld|%s|%s|%ld|%d",
+    snprintf(buffer, sizeof(buffer), "%d|%ld|%s|%s|%ld|%d|%s",
               block->block_id,
               block->timestamp,
               block->previous_hash,
               block->merkle_root,
               block->nonce,
-              block->difficulty);
+              block->difficulty,
+              block->miner_id);
  
     sha256(buffer, output);
 }
@@ -177,7 +178,6 @@ void view_blockchain()
         printf("  nonce:             %ld\n", b->nonce);
         printf("  miner_id:          %s\n", b->miner_id);
         printf("  difficulty:        %d\n", b->difficulty);
-        printf("  block_size:        %s\n", b->block_size);
 
         if (b->transaction_count > 0 && b->transactions != NULL) {
             printf("  transactions:\n");
