@@ -6,9 +6,9 @@ typedef struct {
     int difficulty;
     int last_retarget_block;
     double reinsurance_balance;
-} Chainstate;
+} ChainState;
 
-extern Chainstate chain_state;
+extern ChainState chain_state;
 
 void init_chain_state();
 
