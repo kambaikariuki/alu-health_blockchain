@@ -383,16 +383,6 @@ sudo apt install libssl-dev
 
 ---
 
-# Authors
-
-African Leadership University
-
-Software Engineering – Low-Level Specialization
-
-Introduction to Blockchain Development
-
----
-
 # License
 
 Educational project developed for academic purposes.
