@@ -11,6 +11,8 @@ typedef struct {
 } Policy;
 
 void enroll_policy();
+void view_policy();
 void renew_policy();
+void policy_status();
 
 #endif
