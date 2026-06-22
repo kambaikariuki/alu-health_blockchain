@@ -2,10 +2,10 @@
 #define MEMBER_REGISTRY_H
 
 #define MAX_MEMBERS 1000
-#include <member.h>
+#include "member.h"
 
 typedef struct {
-    Member members[MAX_MEMBERS];
+    Member *members[MAX_MEMBERS];
     int count;
 } MemberRegistry;
 

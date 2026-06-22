@@ -1,7 +1,7 @@
 #ifndef MEMPOOL_H
 #define MEMPOOL_H
 
-#include "transaction.h"
+#include "../../include/transactions/transaction.h"
 
 #define MEMPOOL_INITIAL_CAPACITY 16
 
